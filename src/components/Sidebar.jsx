@@ -1,5 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Users, ArrowDownLeft, ShieldCheck, Globe, Award, ArrowUpRight, CreditCard, TrendingUp, LogOut, ChevronRight } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const menuItems = [
@@ -26,14 +27,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             {/* Sidebar Content */}
             <aside className={`fixed inset-y-0 left-0 z-50 w-72 bg-[#0B1120] text-slate-300 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0 flex flex-col border-r border-slate-800`}>
                 {/* Logo Area */}
-                <div className="flex h-24 items-center px-8 border-b border-slate-800">
-                    <div className="h-10 w-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mr-3 shadow-lg shadow-emerald-500/20">
-                        <TrendingUp className="text-white h-6 w-6" />
-                    </div>
-                    <div>
-                        <h1 className="text-xl font-bold tracking-tight text-white">GENIUS<span className="text-emerald-400">CRYPTO</span></h1>
-                        <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">Network Dashboard</p>
-                    </div>
+                <div className="flex h-24 items-center px-6 border-b border-slate-800 justify-center">
+                    <img src={logo} alt="Genius Crypto" className="h-[4.5rem] w-auto object-contain" />
                 </div>
 
                 {/* Navigation */}
