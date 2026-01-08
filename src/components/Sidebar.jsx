@@ -19,30 +19,30 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             {/* Mobile Overlay */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 z-40 bg-black/60 lg:hidden backdrop-blur-sm transition-opacity"
+                    className="fixed inset-0 z-40 bg-black/50 lg:hidden backdrop-blur-sm transition-opacity"
                     onClick={toggleSidebar}
                 ></div>
             )}
 
             {/* Sidebar Content */}
-            <aside className={`fixed inset-y-0 left-0 z-50 w-72 bg-[#0B1120] text-slate-300 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0 flex flex-col border-r border-slate-800`}>
+            <aside className={`fixed inset-y-0 left-0 z-50 w-72 bg-white text-slate-600 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0 flex flex-col border-r border-slate-200 shadow-sm`}>
                 {/* Logo Area */}
-                <div className="flex h-24 items-center px-6 border-b border-slate-800 justify-center">
+                <div className="flex h-24 items-center px-6 border-b border-slate-100 justify-center">
                     <img src={logo} alt="Genius Crypto" className="h-[4.5rem] w-auto object-contain" />
                 </div>
 
                 {/* Navigation */}
                 <nav className="flex-1 overflow-y-auto py-6 px-4 space-y-1 custom-scrollbar">
-                    <p className="px-4 text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Main Menu</p>
+                    <p className="px-4 text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Main Menu</p>
                     {menuItems.map((item) => (
                         <button
                             key={item.name}
                             className={`flex w-full items-center gap-4 px-4 py-3.5 rounded-xl transition-all duration-300 group ${item.active
-                                ? 'bg-gradient-to-r from-emerald-600/20 to-teal-600/10 text-emerald-400 border border-emerald-500/10'
-                                : 'text-slate-400 hover:bg-slate-800/50 hover:text-emerald-300'
+                                ? 'bg-emerald-50 text-emerald-600 border border-emerald-100 shadow-sm'
+                                : 'text-slate-500 hover:bg-slate-50 hover:text-emerald-500'
                                 }`}
                         >
-                            <item.icon size={20} className={`transition-colors duration-300 ${item.active ? 'text-emerald-400' : 'text-slate-500 group-hover:text-emerald-400'}`} />
+                            <item.icon size={20} className={`transition-colors duration-300 ${item.active ? 'text-emerald-600' : 'text-slate-400 group-hover:text-emerald-500'}`} />
                             <span className="font-medium">{item.name}</span>
                             {item.active && <ChevronRight size={16} className="ml-auto opacity-70" />}
                         </button>
@@ -50,8 +50,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </nav>
 
                 {/* Bottom Actions */}
-                <div className="p-4 border-t border-slate-800 bg-[#0F172A]/50">
-                    <button className="flex w-full items-center gap-3 px-4 py-3 text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 rounded-xl transition-colors">
+                <div className="p-4 border-t border-slate-100 bg-slate-50/50">
+                    <button className="flex w-full items-center gap-3 px-4 py-3 text-rose-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl transition-colors">
                         <LogOut size={20} />
                         <span className="font-medium">Sign Out</span>
                     </button>

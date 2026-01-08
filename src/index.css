@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-[#0F172A] text-slate-200 antialiased;
-  }
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+    }
 }
 
 @layer utilities {
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #334155; 
-    border-radius: 4px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #475569; 
-  }
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
 }

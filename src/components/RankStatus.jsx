@@ -12,22 +12,22 @@ const RankStatus = () => {
     ];
 
     return (
-        <div className="bg-[#1E293B]/50 backdrop-blur-lg rounded-2xl border border-slate-700/50 overflow-hidden h-full shadow-lg">
-            <div className="p-6 border-b border-slate-700/50 flex justify-between items-center bg-slate-900/40">
+        <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden h-full shadow-sm">
+            <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
                 <div>
-                    <h3 className="font-bold text-slate-100 text-lg">Rank Achievements</h3>
-                    <p className="text-sm text-slate-400">Track your progress to the next level</p>
+                    <h3 className="font-bold text-slate-800 text-lg">Rank Achievements</h3>
+                    <p className="text-sm text-slate-500">Track your progress to the next level</p>
                 </div>
-                <button className="text-emerald-400 text-sm font-semibold hover:text-emerald-300 hover:underline transition-colors">View All</button>
+                <button className="text-emerald-600 text-sm font-semibold hover:text-emerald-500 hover:underline transition-colors">View All</button>
             </div>
 
-            <div className="divide-y divide-slate-800/50">
+            <div className="divide-y divide-slate-100">
                 {ranks.map((rank) => (
-                    <div key={rank.id} className="p-5 flex flex-col sm:flex-row items-center gap-4 hover:bg-slate-800/30 transition-colors">
+                    <div key={rank.id} className="p-5 flex flex-col sm:flex-row items-center gap-4 hover:bg-slate-50 transition-colors">
                         {/* Icon Status */}
-                        <div className={`h-12 w-12 rounded-full flex items-center justify-center border shrink-0 ${rank.status === 'unlocked' ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' :
-                            rank.status === 'active' ? 'bg-blue-500/10 border-blue-500/30 text-blue-400' :
-                                'bg-slate-800 border-slate-700 text-slate-500'
+                        <div className={`h-12 w-12 rounded-full flex items-center justify-center border shrink-0 ${rank.status === 'unlocked' ? 'bg-emerald-50 border-emerald-200 text-emerald-600' :
+                            rank.status === 'active' ? 'bg-blue-50 border-blue-200 text-blue-600' :
+                                'bg-slate-50 border-slate-200 text-slate-400'
                             }`}>
                             {rank.status === 'unlocked' ? <ShieldCheck size={20} /> : <Briefcase size={20} />}
                         </div>
@@ -35,12 +35,12 @@ const RankStatus = () => {
                         {/* Info */}
                         <div className="flex-1 w-full text-center sm:text-left">
                             <div className="flex justify-between items-center mb-1">
-                                <h4 className={`font-bold ${rank.status === 'locked' ? 'text-slate-500' : 'text-slate-200'}`}>{rank.title}</h4>
-                                <span className="text-xs font-medium text-slate-500">Bonus: <span className="text-emerald-400 font-bold">{rank.income}</span></span>
+                                <h4 className={`font-bold ${rank.status === 'locked' ? 'text-slate-400' : 'text-slate-800'}`}>{rank.title}</h4>
+                                <span className="text-xs font-medium text-slate-500">Bonus: <span className="text-emerald-600 font-bold">{rank.income}</span></span>
                             </div>
 
                             {/* Progress Bar */}
-                            <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                            <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
                                 <div
                                     className={`h-full rounded-full transition-all duration-1000 ${rank.status === 'unlocked' ? 'bg-gradient-to-r from-emerald-500 to-teal-400' : 'bg-gradient-to-r from-blue-500 to-indigo-400'}`}
                                     style={{ width: `${rank.progress}%` }}
@@ -54,9 +54,9 @@ const RankStatus = () => {
 
                         {/* Badge */}
                         <div className="shrink-0">
-                            {rank.status === 'unlocked' && <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold shadow-sm shadow-emerald-900/20">Completed</span>}
-                            {rank.status === 'active' && <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold animate-pulse">In Progress</span>}
-                            {rank.status === 'locked' && <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-500 text-xs font-bold">Locked</span>}
+                            {rank.status === 'unlocked' && <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-100">Completed</span>}
+                            {rank.status === 'active' && <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-100 animate-pulse">In Progress</span>}
+                            {rank.status === 'locked' && <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-500 text-xs font-bold border border-slate-200">Locked</span>}
                         </div>
                     </div>
                 ))}

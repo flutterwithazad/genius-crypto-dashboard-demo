@@ -27,7 +27,7 @@ const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-[#0F172A] font-sans text-slate-200 selection:bg-emerald-500/30 overflow-hidden">
+    <div className="flex h-screen bg-slate-50 font-sans text-slate-900 selection:bg-emerald-500/30 overflow-hidden">
       <Sidebar isOpen={sidebarOpen} toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
 
       <div className="flex-1 flex flex-col overflow-hidden relative">
@@ -41,8 +41,8 @@ const App = () => {
 
             {/* SECTION 1: Wallet & Funds (Primary) */}
             <div>
-              <h3 className="font-bold text-slate-100 text-lg mb-4 flex items-center gap-2">
-                <Wallet className="text-emerald-400" size={20} /> <span className="tracking-tight">Wallet & Funds</span>
+              <h3 className="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                <Wallet className="text-emerald-600" size={20} /> <span className="tracking-tight">Wallet & Funds</span>
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <StatCard
@@ -73,8 +73,8 @@ const App = () => {
 
             {/* SECTION 2: Business Overview */}
             <div>
-              <h3 className="font-bold text-slate-100 text-lg mb-4 flex items-center gap-2">
-                <BarChart3 className="text-blue-400" size={20} /> <span className="tracking-tight">Business Overview</span>
+              <h3 className="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                <BarChart3 className="text-blue-600" size={20} /> <span className="tracking-tight">Business Overview</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <StatCard
@@ -111,10 +111,10 @@ const App = () => {
               {/* Detailed Income Streams Grid */}
               <div className="lg:col-span-2">
                 <div className="flex items-center justify-between mb-5">
-                  <h3 className="font-bold text-slate-100 text-lg flex items-center gap-2">
-                    <DollarSign className="text-orange-400" size={20} /> <span className="tracking-tight">Income Streams</span>
+                  <h3 className="font-bold text-slate-800 text-lg flex items-center gap-2">
+                    <DollarSign className="text-orange-500" size={20} /> <span className="tracking-tight">Income Streams</span>
                   </h3>
-                  <button className="p-2 hover:bg-slate-800 rounded-full text-slate-400 transition-colors"><MoreVertical size={20} /></button>
+                  <button className="p-2 hover:bg-slate-200 rounded-full text-slate-500 transition-colors"><MoreVertical size={20} /></button>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <StatCard title="Trade Income" value="$1,200.00" icon={TrendingUp} colorTheme="orange" />
@@ -134,7 +134,7 @@ const App = () => {
             </div>
 
             {/* Footer */}
-            <div className="text-center text-slate-500 text-xs py-8 border-t border-slate-800/50 mt-8">
+            <div className="text-center text-slate-400 text-xs py-8 border-t border-slate-200 mt-8">
               &copy; 2024 GeniusCrypto Network. All rights reserved.
             </div>
 
