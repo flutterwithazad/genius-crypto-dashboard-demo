@@ -12,7 +12,7 @@ const ReferralCard = () => {
     };
 
     return (
-        <div className="bg-gradient-to-r from-indigo-900 to-slate-900 rounded-3xl p-5 sm:p-8 text-white shadow-2xl relative overflow-hidden isolate border border-indigo-500/20">
+        <div className="bg-gradient-to-r from-indigo-900 to-slate-900 rounded-3xl p-5 sm:p-8 text-white shadow-2xl relative overflow-hidden isolate border border-indigo-500/20 animate-fade-in-up">
             {/* Abstract Background Shapes */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-emerald-500/20 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-500/20 blur-3xl"></div>

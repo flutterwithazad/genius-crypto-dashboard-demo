@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight, ArrowDownLeft } from 'lucide-react';
 
 // eslint-disable-next-line no-unused-vars
-const StatCard = ({ title, value, icon: Icon, trend, trendValue, colorTheme = "emerald", subText }) => {
+const StatCard = ({ title, value, icon: Icon, trend, trendValue, colorTheme = "emerald", subText, className = "" }) => {
     const colors = {
         emerald: "from-emerald-500 to-teal-500 text-emerald-600 bg-emerald-50 border-emerald-100",
         blue: "from-blue-500 to-indigo-500 text-blue-600 bg-blue-50 border-blue-100",
@@ -15,7 +15,7 @@ const StatCard = ({ title, value, icon: Icon, trend, trendValue, colorTheme = "e
     };
 
     return (
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500/20 transition-all duration-300 group flex flex-col justify-between relative overflow-hidden">
+        <div className={`bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-emerald-500/20 transition-all duration-300 group flex flex-col justify-between relative overflow-hidden animate-fade-in-up ${className}`}>
             {/* Background Gradient Blob */}
             <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full blur-3xl opacity-20 bg-gradient-to-br ${colors[colorTheme]?.split(" ")[1] || "bg-slate-200"}`}></div>
 

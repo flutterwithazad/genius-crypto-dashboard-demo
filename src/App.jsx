@@ -53,6 +53,7 @@ const App = () => {
                   trendValue="+12%"
                   colorTheme="emerald"
                   subText="Withdrawable funds"
+                  className="delay-100"
                 />
                 <StatCard
                   title="Fund Wallet"
@@ -60,6 +61,7 @@ const App = () => {
                   icon={CreditCard}
                   colorTheme="blue"
                   subText="Activation funds"
+                  className="delay-200"
                 />
                 <StatCard
                   title="Interest Wallet"
@@ -67,6 +69,7 @@ const App = () => {
                   icon={PiggyBank}
                   colorTheme="indigo"
                   subText="Accrued interest"
+                  className="delay-300"
                 />
               </div>
             </div>
@@ -82,6 +85,7 @@ const App = () => {
                   value="$1,000.00"
                   icon={Landmark}
                   colorTheme="violet"
+                  className="delay-100"
                 />
                 <StatCard
                   title="Total Business"
@@ -90,18 +94,21 @@ const App = () => {
                   colorTheme="cyan"
                   trend="up"
                   trendValue="+5%"
+                  className="delay-200"
                 />
                 <StatCard
                   title="Total Deposit"
                   value="$5,000.00"
                   icon={ArrowDownLeft}
                   colorTheme="slate"
+                  className="delay-300"
                 />
                 <StatCard
                   title="Total Withdrawal"
                   value="$3,500.00"
                   icon={ArrowUpRight}
                   colorTheme="slate"
+                  className="delay-400"
                 />
               </div>
             </div>
@@ -117,13 +124,13 @@ const App = () => {
                   <button className="p-2 hover:bg-slate-200 rounded-full text-slate-500 transition-colors"><MoreVertical size={20} /></button>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <StatCard title="Trade Income" value="$1,200.00" icon={TrendingUp} colorTheme="orange" />
-                  <StatCard title="Level Income" value="$450.00" icon={Layers} colorTheme="slate" />
-                  <StatCard title="Direct Income" value="$300.00" icon={Users} colorTheme="slate" />
-                  <StatCard title="Reward Income" value="$150.00" icon={Award} colorTheme="rose" />
-                  <StatCard title="Royalty Income" value="$80.00" icon={Briefcase} colorTheme="slate" />
-                  <StatCard title="Gap Margin" value="$0.00" icon={Percent} colorTheme="slate" />
-                  <StatCard title="Pool Income" value="$0.00" icon={Users} colorTheme="slate" />
+                  <StatCard title="Trade Income" value="$1,200.00" icon={TrendingUp} colorTheme="orange" className="delay-100" />
+                  <StatCard title="Level Income" value="$450.00" icon={Layers} colorTheme="slate" className="delay-150" />
+                  <StatCard title="Direct Income" value="$300.00" icon={Users} colorTheme="slate" className="delay-200" />
+                  <StatCard title="Reward Income" value="$150.00" icon={Award} colorTheme="rose" className="delay-250" />
+                  <StatCard title="Royalty Income" value="$80.00" icon={Briefcase} colorTheme="slate" className="delay-300" />
+                  <StatCard title="Gap Margin" value="$0.00" icon={Percent} colorTheme="slate" className="delay-350" />
+                  <StatCard title="Pool Income" value="$0.00" icon={Users} colorTheme="slate" className="delay-400" />
                 </div>
               </div>
 
