@@ -49,13 +49,13 @@ const ReferralCard = () => {
                 <div className="flex gap-3 sm:gap-4 w-full sm:w-auto justify-center">
                     <button className="group flex-1 sm:flex-none flex flex-col items-center justify-center h-24 sm:h-28 w-auto sm:w-32 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-emerald-500/10">
                         <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-400 flex items-center justify-center mb-2 sm:mb-3 shadow-lg shadow-emerald-500/30 group-hover:shadow-emerald-500/50 transition-all">
-                            <Wallet className="text-white w-5 h-5 sm:w-6 sm:h-6" />
+                            <Wallet className="text-white w-5 h-5 sm:w-6 sm:h-6 animate-pulse-slow" />
                         </div>
                         <span className="text-xs sm:text-sm font-bold text-slate-200">Add Fund</span>
                     </button>
                     <button className="group flex-1 sm:flex-none flex flex-col items-center justify-center h-24 sm:h-28 w-auto sm:w-32 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-blue-500/10">
                         <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center mb-2 sm:mb-3 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all">
-                            <Share2 className="text-white w-5 h-5 sm:w-6 sm:h-6" />
+                            <Share2 className="text-white w-5 h-5 sm:w-6 sm:h-6 animate-pulse-slow" />
                         </div>
                         <span className="text-xs sm:text-sm font-bold text-slate-200">Marketing</span>
                     </button>

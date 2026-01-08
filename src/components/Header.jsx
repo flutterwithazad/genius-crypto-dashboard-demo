@@ -27,7 +27,7 @@ const Header = ({ toggleSidebar }) => {
 
                 {/* Action Icons */}
                 <div className="flex items-center gap-2">
-                    <button className="relative p-2.5 hover:bg-slate-100 rounded-full transition-colors text-slate-500 hover:text-slate-700">
+                    <button className="relative p-2.5 hover:bg-slate-100 rounded-full transition-colors text-slate-500 hover:text-slate-700 hover:animate-swing">
                         <Bell size={20} />
                         <span className="absolute top-2.5 right-3 h-2 w-2 bg-rose-500 rounded-full ring-2 ring-white animate-pulse"></span>
                     </button>

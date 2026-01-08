@@ -21,7 +21,7 @@ const StatCard = ({ title, value, icon: Icon, trend, trendValue, colorTheme = "e
 
             <div className="flex justify-between items-start mb-4 relative z-10">
                 <div className={`p-3 rounded-2xl bg-gradient-to-br ${colors[colorTheme].split(" ").slice(0, 2).join(" ")} text-white shadow-md shadow-slate-200 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon size={24} className="text-white" />
+                    <Icon size={24} className="text-white group-hover:animate-swing" />
                 </div>
                 {trend && (
                     <div className={`flex items-center text-xs font-bold px-2 py-1 rounded-full border ${trend === 'up' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 'bg-rose-50 text-rose-700 border-rose-100'}`}>
